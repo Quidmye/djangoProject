@@ -9,11 +9,11 @@ def calculate(request, first, operation, last):
     if operation == '+':
         result = first+last
     elif operation == '-':
-        result = first + last
+        result = first - last
     elif operation == '*':
         result = first * last
     elif operation == ':' or operation == 'div':
-        result = first * last
+        result = first / last
     else:
         return HttpResponseBadRequest('Bad Request')
 
