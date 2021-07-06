@@ -13,7 +13,11 @@ def calculate(request, first, operation, last):
     elif operation == '*':
         result = first * last
     elif operation == ':' or operation == 'div':
-        result = first / last
+        try:
+            result = first / last
+        except ZeroDivisionError:
+            result = 0
+
     else:
         return HttpResponseBadRequest('Bad Request')
 
