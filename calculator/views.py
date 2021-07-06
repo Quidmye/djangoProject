@@ -12,7 +12,7 @@ def calculate(request, first, operation, last):
         result = first + last
     elif operation == '*':
         result = first * last
-    elif operation == '/':
+    elif operation == ':' or operation == 'div':
         result = first * last
     else:
         return HttpResponseBadRequest('Bad Request')
